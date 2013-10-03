@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<leffat>
+  <genre name="Action">
+    
+      <name>
+        Top Gun
+      </name>
+      <name>
+        World War Z
+      </name>
+    
+  </genre>
+  <genre name="Comedy">
+    
+      <name>
+        Superbad
+      </name>
+
+  </genre>
+  <genre name="Fantasy">
+    
+      <name>
+        The Hobbit
+      </name>
+    
+  </genre>
+  <genre name="Sci-fi">
+    
+      <name>
+        Alien
+      </name>
+    <name>
+      Star Wars IV
+    </name>
+
+
+  </genre>  
+</leffat>
