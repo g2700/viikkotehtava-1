@@ -13,6 +13,7 @@
         <br />
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Tehtava-3/g2700_Treeview.aspx">Viikkotehtävän 3 ratkaisu</asp:HyperLink><br />
     </div>
+    <asp:HyperLink ID="HyperLinkTT" runat="server" NavigateUrl="~/jakso_palaute.aspx">10.10 tuntitehtävä & puolivälipalaute</asp:HyperLink>
 
 </asp:Content>
 
