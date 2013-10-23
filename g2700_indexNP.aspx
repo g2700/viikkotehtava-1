@@ -12,9 +12,12 @@
         <asp:HyperLink ID="HyperLinkT2" runat="server" NavigateUrl="~/g2700_elakelaskuri.aspx">Viikkotehtävän 2 ratkaisu</asp:HyperLink><br />
         <br />
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Tehtava-3/g2700_Treeview.aspx">Viikkotehtävän 3 ratkaisu</asp:HyperLink><br />
+                <br />
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/g2700_wanhatautot.aspx">Viikkotehtävän 4 ratkaisu</asp:HyperLink><br />
+                <br />
+        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/g2700_levykauppax.aspx">Viikkotehtävän 5 ratkaisu</asp:HyperLink><br />
     </div>
     <asp:HyperLink ID="HyperLinkTT" runat="server" NavigateUrl="~/jakso_palaute.aspx">10.10 tuntitehtävä & puolivälipalaute</asp:HyperLink>
 
-</asp:Content>
 
-        
+</asp:Content>
