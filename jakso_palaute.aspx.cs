@@ -20,27 +20,16 @@ public partial class jakso_palaute : System.Web.UI.Page
         if (Page.IsValid)
         {
             XmlDocument oXmlDocument = new XmlDocument();
-
             oXmlDocument.Load(MapPath("~/App_Data/Palautteet.xml"));
-
             XmlNode oXmlRootNode = oXmlDocument.SelectSingleNode("palautteet");
-
             XmlNode oXmlRecordNode = oXmlRootNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "palaute", ""));
-            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element,
-                "pvm", "")).InnerText = TextBox1.Text;
-            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element,
-                "tekija", "")).InnerText = TextBox2.Text;
-            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element,
-                 "opittu", "")).InnerText = TextBox3.Text;
-            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element,
-            "haluanoppia", "")).InnerText = TextBox4.Text;
-            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element,
-                "hyvaa", "")).InnerText = TextBox5.Text;
-            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element,
-                 "parannettavaa", "")).InnerText = TextBox6.Text;
-            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element,
-                  "muuta", "")).InnerText = TextBox7.Text;
-
+            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "pvm", "")).InnerText = TextBox1.Text;
+            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "tekija", "")).InnerText = TextBox2.Text;
+            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "opittu", "")).InnerText = TextBox3.Text;
+            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "haluanoppia", "")).InnerText = TextBox4.Text;
+            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "hyvaa", "")).InnerText = TextBox5.Text;
+            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "parannettavaa", "")).InnerText = TextBox6.Text;
+            oXmlRecordNode.AppendChild(oXmlDocument.CreateNode(XmlNodeType.Element, "muuta", "")).InnerText = TextBox7.Text;
             oXmlDocument.Save(MapPath("~/App_Data/Palautteet.xml")); 
 
         }
