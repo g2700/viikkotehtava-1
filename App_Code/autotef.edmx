@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="autodbModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="autodbModelStoreContainer">
+          <EntitySet Name="wanhatautot" EntityType="autodbModel.Store.wanhatautot" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="wanhatautot">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="rekkari" Type="nvarchar" MaxLength="100" />
+          <Property Name="merkki" Type="nvarchar" MaxLength="100" />
+          <Property Name="malli" Type="nvarchar" MaxLength="100" />
+          <Property Name="vm" Type="int" />
+          <Property Name="myyntihinta" Type="int" />
+          <Property Name="sisaanostohinta" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="autodbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="autodbEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="wanhatautot" EntityType="autodbModel.autott" />
+        </EntityContainer>
+        <EntityType Name="autott">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="rekkari" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="merkki" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="malli" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="vm" Type="Int32" />
+          <Property Name="myyntihinta" Type="Int32" />
+          <Property Name="sisaanostohinta" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="autodbModelStoreContainer" CdmEntityContainer="autodbEntities">
+          <EntitySetMapping Name="wanhatautot">
+            <EntityTypeMapping TypeName="autodbModel.autott">
+              <MappingFragment StoreEntitySet="wanhatautot">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rekkari" ColumnName="rekkari" />
+                <ScalarProperty Name="merkki" ColumnName="merkki" />
+                <ScalarProperty Name="malli" ColumnName="malli" />
+                <ScalarProperty Name="vm" ColumnName="vm" />
+                <ScalarProperty Name="myyntihinta" ColumnName="myyntihinta" />
+                <ScalarProperty Name="sisaanostohinta" ColumnName="sisaanostohinta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
